@@ -91,7 +91,7 @@ document.addEventListener('alpine:init', () => {
 
       excludeCredentialIdsList.forEach((value) => {
         excludeCredentials.push({
-          id: base64url.parse(value, { loose: true }),
+          id: base64url.parse(value, { loose: true }) as BufferSource,
           type: 'public-key',
         });
       });
@@ -121,7 +121,7 @@ document.addEventListener('alpine:init', () => {
         }
 
         const publicKey: PublicKeyCredentialCreationOptions = {
-          challenge: base64url.parse(challenge, { loose: true }),
+          challenge: base64url.parse(challenge, { loose: true }) as BufferSource,
           pubKeyCredParams: getPubKeyCredParams(signatureAlgorithms),
           rp: {
             id: rpId,
@@ -129,7 +129,7 @@ document.addEventListener('alpine:init', () => {
           },
           user: {
             displayName: username,
-            id: base64url.parse(userId, { loose: true }),
+            id: base64url.parse(userId, { loose: true }) as BufferSource,
             name: username,
           },
         };

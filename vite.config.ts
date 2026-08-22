@@ -11,7 +11,7 @@ export default defineConfig({
       ],
       output: {
         assetFileNames: '[name][extname]',
-        dir: 'theme/keywind/login/resources/dist',
+        dir: 'theme/sheltermapV2/login/resources/dist',
         entryFileNames: '[name].js',
       },
     },
